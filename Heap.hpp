@@ -15,11 +15,11 @@ namespace Algorithm
 	 * This heap needs to know how big it will be at instantiation with a template argument
 	 *
 	 */
-	template <typename T, size_t SIZE>
-	class MaxHeap
+	template <typename T, size_t SIZE, HeapType_t HEAP_TYPE = HeapType_t::MAX>
+	class Heap
 	{
 	public:
-		MaxHeap();
+		Heap();
 
 		void Insert(T item);
 
@@ -29,8 +29,6 @@ namespace Algorithm
 
 		size_t GetCurrentSize();
 
-		// @todo REMOVE AFTER FINISHING IMPL
-		std::array<T, SIZE> GetHeapArray();
 	private:
 		void TrickleUp_(int const& currentIndex);
 
