@@ -83,7 +83,7 @@ namespace Algorithm
 				TrickleDown_(largerChildNodeIndex);
 			}
 		}
-		else if (HEAP_TYPE == HeapType_t::MAX)
+		else if (HEAP_TYPE == HeapType_t::MIN)
 		{
 			int smallerChildNodeIndex = m_currentSize <= (currentIndex + 1) * 2 &&
 				(m_heapArray.at((currentIndex * 2) + 1) < m_heapArray.at((currentIndex + 1) * 2)) ?
